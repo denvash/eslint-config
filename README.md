@@ -62,7 +62,7 @@ Run `npm info "@dennisvash/eslint-config@latest" peerDependencies` to list the p
 
 ## Configurations
 
-We export four ESLint configurations for your usage:
+Export four ESLint configurations for your usage:
 
 1. [Default (2 space)](#default-config)
 2. [Four Spaces](#four-spaces-config)
