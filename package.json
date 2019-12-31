@@ -20,15 +20,15 @@
     "email": "dennisvash@gmail.com",
     "twitter": "@dennisvash"
   },
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/denvash/eslint-config",
   "bugs": {
     "url": "https://github.com/denvash/eslint-config/issues"
   },
   "peerDependencies": {
-    "eslint": "^5.x.x",
+    "eslint": "^6.x.x",
     "babel-eslint": "^10.x.x",
     "prettier": "^1.x.x",
-    "eslint-config-prettier": "^4.x.x"
+    "eslint-config-prettier": "^6.x.x"
   }
 }
