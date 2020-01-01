@@ -29,6 +29,7 @@
     "eslint": "^6.x.x",
     "babel-eslint": "^10.x.x",
     "prettier": "^1.x.x",
-    "eslint-config-prettier": "^6.x.x"
+    "eslint-config-prettier": "^6.x.x",
+    "eslint-plugin-react-hooks": "^2.x.x"
   }
 }
