@@ -5,6 +5,11 @@ module.exports = {
     "plugin:jsx-a11y/recommended"
   ],
   plugins: ["jsx-a11y"],
+  settings: {
+    react: {
+      version: "detect"
+    }
+  },
   parserOptions: {
     sourceType: "module",
     ecmaFeatures: {

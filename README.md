@@ -5,7 +5,8 @@
 [My](https://dennisvash.com) default [`ESLint`](https://eslint.org/) configuration , pairs well with [`Prettier configuration`](https://www.npmjs.com/package/@dennisvash/prettier-config).
 
 - [eslint-config](#eslint-config)
-  - [Installation](#installation)
+  - [Quick Start](#quick-start)
+  - [Default Config Installation](#default-config-installation)
   - [Configurations](#configurations)
     - [Default Config](#default-config)
     - [Four Spaces Config](#four-spaces-config)
@@ -17,36 +18,57 @@
     - [Sublime Text](#sublime-text)
     - [Atom](#atom)
   - [Pre-commit Hook](#pre-commit-hook)
+  - [Overriding Rules](#overriding-rules)
   - [Publishing to npm](#publishing-to-npm)
   - [Enforced Rules](#enforced-rules)
-  - [Overriding Rules](#overriding-rules)
 
-## Installation
+## Quick Start
 
-1. Install all dependencies
+Pre-commit + prettier + eslint for React project:
 
-   - **Option 1:** With `npx`
+1. Install deps
 
-     ```sh
-     npx install-peerdeps --dev @dennisvash/eslint-config
-     ```
+    ```sh
+    yarn add -D @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-react eslint-plugin-jsx-a11y lint-staged husky pretty-quick
+    ```
 
-   - **Option 2:** Without `npx`
+2. In `.eslintrc`:
 
-     ```sh
-     yarn add --dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier
+    ```json
+    {
+      "extends": "@dennisvash/eslint-config/react"
+    }
+    ```
 
-     # or
-     npm install --save-dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier
-     ```
-
-2. Create an `.eslintrc` file at the root of your project with the following:
+3. In `package.json`
 
    ```json
    {
-     "extends": "@dennisvash"
+     "lint-staged": {
+       "*.js": ["eslint --fix", "git add"]
+     },
+     "husky": {
+       "hooks": {
+         "pre-commit": "pretty-quick --staged && lint-staged"
+       }
+     }
    }
    ```
+
+## Default Config Installation
+
+1. Install all dependencies
+
+    ```sh
+      # npx
+      npx install-peerdeps --dev @dennisvash/eslint-config
+
+      # yarn
+      yarn add --dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier
+
+      # npm
+      npm install --save-dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier
+    ```
 
 ## Configurations
 
@@ -59,7 +81,7 @@ Export four ESLint configurations for your usage:
 
 ### Default Config
 
-**In your `.eslintrc`:**
+In `.eslintrc`:
 
 ```json
 {
@@ -94,7 +116,7 @@ Includes everything in the default config, plus environment specification and re
 npm install --save-dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-react eslint-plugin-jsx-a11y
 ```
 
-**In your `.eslintrc`:**
+In your `.eslintrc`:
 
 ```json
 {
@@ -113,7 +135,7 @@ Includes everything in the default config, plus environment specification and vu
 npm install --save-dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-vue vue-eslint-parser
 ```
 
-**In your `.eslintrc`:**
+In your `.eslintrc`:
 
 ```json
 {
@@ -123,9 +145,9 @@ npm install --save-dev @dennisvash/eslint-config eslint babel-eslint prettier es
 
 ## Specifying Environments
 
-Our **default** & **four spaces** configs purposefully do not specify a certain environment as to not make any assumptions about your project. The only environment we do specify be default is `es6`. You can see all the [default settings here](https://github.com/dennisvash/eslint-config/blob/master/index.js).
+For **default** & **four spaces** configs purposefully do not specify a certain environment as to not make any assumptions about your project. The only environment it specifies is `es6`. You can see all the [default settings here](https://github.com/dennisvash/eslint-config/blob/master/index.js).
 
-Therefor, you should specify your project's environment yourself in your ESLint config. For example:
+Therefore, you should specify your project's environment yourself in your ESLint config. For example:
 
 ```json
 {
@@ -201,6 +223,19 @@ As another line of defense, if you want ESLint to automatically fix your errors 
      }
    }
    ```
+
+## Overriding Rules
+
+If you'd like to override any rules, you can add the rules to your `.eslintrc` file.
+
+```json
+{
+  "extends": "@dennisvash",
+  "rules": {
+    "no-console": "off"
+  }
+}
+```
 
 ## Publishing to npm
 
@@ -908,16 +943,3 @@ const str = `Time: ${12 * 60 * 60 * 1000}`;
 ```
 
 </details>
-
-## Overriding Rules
-
-If you'd like to override any rules, you can add the rules to your `.eslintrc` file.
-
-```json
-{
-  "extends": "@dennisvash",
-  "rules": {
-    "no-console": "off"
-  }
-}
-```
