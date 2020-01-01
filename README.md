@@ -28,17 +28,17 @@ Pre-commit + prettier + eslint for React project:
 
 1. Install deps
 
-    ```sh
-    yarn add -D @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-react eslint-plugin-jsx-a11y lint-staged husky pretty-quick
-    ```
+   ```sh
+   yarn add -D @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y lint-staged husky pretty-quick
+   ```
 
 2. In `.eslintrc`:
 
-    ```json
-    {
-      "extends": "@dennisvash/eslint-config/react"
-    }
-    ```
+   ```json
+   {
+     "extends": "@dennisvash/eslint-config/react"
+   }
+   ```
 
 3. In `package.json`
 
@@ -59,16 +59,16 @@ Pre-commit + prettier + eslint for React project:
 
 1. Install all dependencies
 
-    ```sh
-      # npx
-      npx install-peerdeps --dev @dennisvash/eslint-config
+   ```sh
+     # npx
+     npx install-peerdeps --dev @dennisvash/eslint-config
 
-      # yarn
-      yarn add --dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier
+     # yarn
+     yarn add --dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier
 
-      # npm
-      npm install --save-dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier
-    ```
+     # npm
+     npm install --save-dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier
+   ```
 
 ## Configurations
 
@@ -111,18 +111,9 @@ Includes everything in the default config, plus environment specification and re
 
 - [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react)
 - [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y)
+- [`eslint-plugin-react-hooks`](https://github.com/facebook/react)
 
-```sh
-npm install --save-dev @dennisvash/eslint-config eslint babel-eslint prettier eslint-config-prettier eslint-plugin-react eslint-plugin-jsx-a11y
-```
-
-In your `.eslintrc`:
-
-```json
-{
-  "extends": "@dennisvash/eslint-config/react"
-}
-```
+Check [Quick Start](#quick-start)
 
 ### Vue Config
 
