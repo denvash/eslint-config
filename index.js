@@ -29,7 +29,7 @@ module.exports = {
     "keyword-spacing": "error",
     "object-curly-spacing": ["error", "always"],
     "one-var": ["error", "never"],
-    quotes: ["error", "backtick", { allowTemplateLiterals: true }],
+    quotes: ["error", "single", { allowTemplateLiterals: true }],
     semi: ["error", "always"],
     "space-before-function-paren": [
       "error",
