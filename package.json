@@ -1,6 +1,6 @@
 {
   "name": "@dennisvash/eslint-config",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Default ESLint configuration",
   "main": "index.js",
   "repository": {
