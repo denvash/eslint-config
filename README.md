@@ -44,14 +44,18 @@ Pre-commit + prettier + eslint for React project:
 
    ```json
    {
-     "lint-staged": {
-       "*.js": ["eslint --fix", "git add"]
-     },
-     "husky": {
-       "hooks": {
-         "pre-commit": "pretty-quick --staged && lint-staged"
-       }
-     }
+    "husky": {
+      "hooks": {
+        "pre-commit": "pretty-quick --staged && lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.js": [
+        "eslint --fix",
+        "prettier --write",
+        "git add"
+      ]
+    }
    }
    ```
 
