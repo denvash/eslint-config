@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@dennisvash/eslint-config?style=for-the-badge)](https://www.npmjs.com/package/@dennisvash/eslint-config)
 
-[My](https://dennisvash.com) default [`ESLint`](https://eslint.org/) configuration , pairs well with [`Prettier configuration`](https://www.npmjs.com/package/@dennisvash/prettier-config).
+[My](https://github.com/denvash) default [`ESLint`](https://eslint.org/) configuration , pairs well with [`Prettier configuration`](https://www.npmjs.com/package/@dennisvash/prettier-config).
 
 - [eslint-config](#eslint-config)
   - [Quick Start](#quick-start)
